@@ -13,7 +13,7 @@
                 <h4>Edit Produk</h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('insert')}}" method="post">
+                <form action="{{url('editproduk')}}" method="post">
                     <div class="form-group">
                         <label for="nama_produk">Nama_produk</label>
                         <input type="text" name="nama_produk" id="nama_produk" class="form-control" required="require">
@@ -36,7 +36,7 @@
                     </div> 
                     <div class="form-group">
                         <label for="foto_produk">Foto_produk</label>
-                        <input type="text" name="foto_produk" id="foto_produk" class="form-control">
+                        <input type="file" name="foto_produk" id="foto_produk" class="form-control">
                     </div>    
                     
         

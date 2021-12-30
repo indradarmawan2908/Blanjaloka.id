@@ -10,10 +10,10 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4>Sewa Toko </h4>
+                <h4>Data Produk </h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('create')}}" method="get">
+                <form action="{{url('editproduk/create')}}" method="get">
                     <div class="form-group">
                         <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-success">
                     </div>
@@ -32,19 +32,19 @@
                     </thead>
 
                     <tbody>
-                        @foreach($data as $key => $kode_produk)
+                        @foreach($editproduk as $EditProduk)
                         <tr>
-                            <td>{{ $d->nama_produk }}</td>
-                            <td>{{ $d->satuan }}</td>
-                            <td>{{ $d->harga_jual }}</td>
-                            <td>{{ $d->stok_saat_ini }}</td>
-                            <td>{{ $d->stok_minimal }}</td>
-                            <td>{{ $d->stok_produk }}</td>
+                            <td>{{ $EditProduk->nama_produk }}</td>
+                            <td>{{ $EditProduk->satuan }}</td>
+                            <td>{{ $EditProduk->harga_jual }}</td>
+                            <td>{{ $EditProduk->stok_saat_ini }}</td>
+                            <td>{{ $EditProduk->stok_minimal }}</td>
+                            <td>{{ $EditProduk->stok_produk }}</td>
                             
                             
                             <td>
-                                <a href="{{url('read',array($d->kode_produk))}}">Read</a>
-                                <a href="{{url('edit',array($d->kode_produk))}}">Edit</a>
+                                <a href="{{url('editproduk/delete',array($EditProduk->kode_produk))}}">Hapus</a>
+                                <a href="{{url('editproduk/edit',array($EditProduk->kode_produk))}}">Edit</a>
                             </td>
                         </tr>
                         @endforeach

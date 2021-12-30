@@ -65,7 +65,7 @@ class DriverController extends Controller
    
        public function read($kode_driver){
         $driver=Driver::find($kode_driver);
-        return view('driver.index',compact('driver'));
+        return view('driver',compact('driver'));
        }
    
 }

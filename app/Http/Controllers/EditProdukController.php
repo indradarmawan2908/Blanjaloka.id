@@ -46,7 +46,7 @@ class EditProdukController extends Controller
        }
     public function read($kode_produk){
         $editproduk=EditProduk::find($kode_produk);
-        return view('editproduk.index',compact('editproduk'));
+        return view('editproduk',compact('editproduk'));
        }
    
 }

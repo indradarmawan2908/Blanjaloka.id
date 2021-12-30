@@ -74,14 +74,13 @@ Route::post('sewatoko/update/{kode_toko}', 'App\Http\Controllers\SewaTokoControl
 Route::get('read/{kode_toko}','App\Http\Controllers\SewaTokoController@read');
 
     //EditProduk
-Route::get('index7','App\Http\Controllers\EditProdukController@index');
-Route::get('back','App\Http\Controllers\/EditProdukController@back');
-Route::get('create','App\Http\Controllers\/EditProdukController@create');
-Route::post('insert', 'App\Http\Controllers\EditProdukController@insert');
-Route::get('delete/{kode_produk}','EditProdukController@delete');
-Route::get('edit/{kode_produk}','App\Http\Controllers\EditProdukController@edit');
-Route::post('update/{kode_produk}', 'App\Http\Controllers\EditProdukController@update');
-Route::get('read/{kode_produk}','App\Http\Controllers\EditProdukController@read');
+Route::get('editproduk','App\Http\Controllers\EditProdukController@index');
+Route::get('editproduk/create','App\Http\Controllers\EditProdukController@create');
+Route::post('editproduk', 'App\Http\Controllers\EditProdukController@insert');
+Route::get('editproduk/delete/{kode_produk}','EditProdukController@delete');
+Route::get('editproduk/edit/{kode_produk}','App\Http\Controllers\EditProdukController@edit');
+Route::post('editproduk/update/{kode_produk}', 'App\Http\Controllers\EditProdukController@update');
+Route::get('editproduk/read/{kode_produk}','App\Http\Controllers\EditProdukController@read');
 
     //Data Pasar
 Route::get('datapasar','App\Http\Controllers\DataPasarController@index');
