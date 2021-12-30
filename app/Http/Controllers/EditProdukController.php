@@ -44,10 +44,6 @@ class EditProdukController extends Controller
            $editproduk->save();
         return redirect ('editproduk')->with('alert-success','Data berhasil Diubah.');
        }
-    public function read($kode_produk){
-        $editproduk=EditProduk::find($kode_produk);
-        return view('editproduk',compact('editproduk'));
-       }
        public function delete($kode_produk){
          $editproduk=EditProduk::find($kode_produk);
             $editproduk->delete();

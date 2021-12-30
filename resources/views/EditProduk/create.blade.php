@@ -28,7 +28,7 @@
                     </div> 
                     <div class="form-group">
                         <label for="stok_saat_ini">Stok Saat Ini</label>
-                        <input type="text" name="sewa_toko" id="sewa_toko" class="form-control">
+                        <input type="text" name="stok_saat_ini" id="stok_saat_ini" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="stok_minimal">Stok Minimal</label>

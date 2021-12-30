@@ -17,7 +17,7 @@
                     
                     <div class="form-group">
                         <label for="nama_produk">Nama Produk</label>
-                        <input type="text" name="nama" id="nama_produk" value="{{$editproduk->nama_produk}}" class="form-control">
+                        <input type="text" name="nama_produk" id="nama_produk" value="{{$editproduk->nama_produk}}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="satuan">Satuan</label>
@@ -30,7 +30,7 @@
                                      
                     <div class="form-group">
                         <label for="stok-saat_ini">Stok Saat ini</label>
-                        <input type="text" name="stok" id="stok_saat_ini" value="{{$editproduk->stok_saat_ini}}" class="form-control">
+                        <input type="text" name="stok_saat_ini" id="stok_saat_ini" value="{{$editproduk->stok_saat_ini}}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="stok_minimal">Stok_minimal</label>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group">
                         <label for="foto_produk">Foto Produk</label>
-                        <input type="file" name="foto" id="foto_produk" value="{{$editproduk->foto_produk}}" class="form-control">
+                        <input type="file" name="foto_produk" id="foto_produk" value="{{$editproduk->foto_produk}}" class="form-control">
                     </div>
                     <div class="form-group">
                         <input type="submit" name="send" id="send" value="Simpan" class="btn btn-success">{!!csrf_field()!!}                       
