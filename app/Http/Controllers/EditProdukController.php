@@ -48,5 +48,10 @@ class EditProdukController extends Controller
         $editproduk=EditProduk::find($kode_produk);
         return view('editproduk',compact('editproduk'));
        }
+       public function delete($kode_produk){
+         $editproduk=EditProduk::find($kode_produk);
+            $editproduk->delete();
+            return back();
+        }
    
 }

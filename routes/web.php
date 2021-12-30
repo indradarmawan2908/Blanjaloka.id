@@ -77,7 +77,7 @@ Route::get('read/{kode_toko}','App\Http\Controllers\SewaTokoController@read');
 Route::get('editproduk','App\Http\Controllers\EditProdukController@index');
 Route::get('editproduk/create','App\Http\Controllers\EditProdukController@create');
 Route::post('editproduk', 'App\Http\Controllers\EditProdukController@insert');
-Route::get('editproduk/delete/{kode_produk}','EditProdukController@delete');
+Route::get('editproduk/delete/{kode_produk}','App\Http\Controllers\EditProdukController@delete');
 Route::get('editproduk/edit/{kode_produk}','App\Http\Controllers\EditProdukController@edit');
 Route::post('editproduk/update/{kode_produk}', 'App\Http\Controllers\EditProdukController@update');
 Route::get('editproduk/read/{kode_produk}','App\Http\Controllers\EditProdukController@read');
