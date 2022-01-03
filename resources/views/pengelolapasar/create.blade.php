@@ -41,6 +41,10 @@
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email" class="form-control">
+                    </div>  
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" name="password" id="password" class="form-control">
                     </div>                                   
                     <div class="form-group">
                         <input type="submit" name="submit" id="submit" value="Simpan" class="btn btn-primary">{{ csrf_field() }}                       

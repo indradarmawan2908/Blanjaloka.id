@@ -33,6 +33,7 @@ class PengelolaPasarController extends Controller
         $foto_ktp->move('file_upload',$foto_ktp->getClientOriginalName());
         $pengelolapasar->foto_ktp = $nama_file;
         $pengelolapasar->email = $request->email;
+        $pengelolapasar->password = $request->password;
         $pengelolapasar->save();
         return redirect('pengelolapasar');
     }

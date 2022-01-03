@@ -39,8 +39,8 @@
                             <td>{{ $Pengelolapasar->alamat }}</td>
                             <td>{{ $Pengelolapasar->tanggal_lahir }}</td>
                             <td>
-                            @if(in_array(pathinfo($Pengelolapasar->foto,PATHINFO_EXTENSION), ['png','jpg','JPEG']))
-                 <img src="{{asset('file_upload')}}/{{$Pengelolapasar->foto}}" style="height:5cm">        
+                            @if(in_array(pathinfo($Pengelolapasar->foto_ktp,PATHINFO_EXTENSION), ['png','jpg','JPEG']))
+                 <img src="{{asset('file_upload')}}/{{$Pengelolapasar->foto_ktp}}" style="height:5cm">        
              @else
                  FAIL    
             @endif 
