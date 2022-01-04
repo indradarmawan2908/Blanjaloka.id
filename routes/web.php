@@ -110,5 +110,13 @@ Route::get('toko/edit/{id_toko}','App\Http\Controllers\TokoController@edit');
 Route::post('toko/update/{id_toko}', 'App\Http\Controllers\TokoController@update');
 Route::get('read/{id_toko}','App\Http\Controllers\TokoController@read');
 
+//Membuat Event Diskon
+Route::get('eventdiskon','App\Http\Controllers\EventDiskonController@index');
+Route::get('eventdiskon/create','App\Http\Controllers\EventDiskonController@create');
+Route::post('eventdiskon','App\Http\Controllers\EventDiskonController@insert');
+Route::get('eventdiskon/delete/{id_event_diskon}','App\Http\Controllers\EventDiskonController@delete');
+
+
+
 
 

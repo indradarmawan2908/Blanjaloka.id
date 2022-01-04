@@ -1,33 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\EventDiskon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class EventDiskonController extends Controller
 {
     public function index(){
-     $data=EventDiskon::all();
-        return view('index',compact('data'));
-    }
-
-    public function back(){
-     return redirect ('/');
+     $eventdiskon=EventDiskon::all();
+        return view('eventdiskon.view')->with('eventdiskon', $eventdiskon);
     }
     
     public function create(){
-     return view('create');
+     return view('eventdiskon.create');
     }
 
     public function insert(Request $request){
-     $data=new EventDiskon();
-        $data->kalender=$request->get('nama');
-        $data->deskripsi=$request->get('nomor_telepon');
-        $data->produk_event=$request->get('alamat');
-        $data->voucher_diskon=$request->get('tanggal_lahir');
-        $data->toko_event=$request->get('no_ktp');
-        $data->save();
-     return redirect ('/');
+     $eventdiskon=new EventDiskon();
+        $eventdiskon->kalender=$request->kalender;
+        $eventdiskon->deskripsi=$request->deskripsi;
+        $eventdiskon->produk_event=$request->produk_event;
+        $eventdiskon->voucher_diskon=$request->voucher_diskon;
+        $eventdiskon->toko_event=$request->toko_event;
+        $eventdiskon->save();
+     return redirect ('eventdiskon');
     }
+    public function delete($id_event_diskon){
+        $eventdiskon=EventDiskon::find($id_event_diskon);
+           $eventdiskon->delete();
+           return back();
+       }
    
 }

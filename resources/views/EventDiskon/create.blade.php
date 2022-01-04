@@ -13,7 +13,7 @@
                 <h4>Membuat Event Diskon</h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('insert')}}" method="post">
+                <form action="{{url('eventdiskon')}}" method="post">
                     <div class="form-group">
                         <label for="kalender">Kalender</label>
                         <input type="date" name="kalender" id="kalender" class="form-control" required="require">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-group">
                         <label for="voucher_dison">Voucher Diskon</label>
-                        <input type="date" name="voucher-diskon" id="voucher_diskon" class="form-control">
+                        <input type="text" name="voucher_diskon" id="voucher_diskon" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="toko_event">Toko Event</label>
