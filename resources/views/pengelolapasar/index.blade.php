@@ -15,7 +15,7 @@
             <div class="panel-body">
                <form action="{{url('pengelolapasar/create')}}" method="get"> 
                     <div class="form-group">
-                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-danger">
+                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-primary">
                     </div>
                 </form>
                 <table class="table table-striped">

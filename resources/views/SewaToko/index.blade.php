@@ -15,7 +15,7 @@
             <div class="panel-body">
                 <form action="{{url('sewatoko/create')}}" method="get">
                     <div class="form-group">
-                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-primary">
+                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-light">
                     </div>
                 </form>
                 <table class="table table-striped">

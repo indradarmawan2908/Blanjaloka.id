@@ -125,6 +125,15 @@ Route::get('bahanmasakan/delete/{id_masakan}','App\Http\Controllers\BahanMasakan
 Route::get('bahanmasakan/edit/{id_masakan}','App\Http\Controllers\BahanMasakanController@edit');
 Route::post('bahanmasakan/update/{id_masakan}', 'App\Http\Controllers\BahanMasakanController@update');
 
+//Belanja Harian
+Route::get('belanjaharian','App\Http\Controllers\BelanjaHarianController@index');
+Route::get('belanjaharian/create','App\Http\Controllers\BelanjaHarianController@create');
+Route::post('belanjaharian', 'App\Http\Controllers\BelanjaHarianController@blanja');
+
+Route::get('belanjaharian/delete/{kode_produk}','App\Http\Controllers\BelanjaHarianController@delete');
+Route::get('belanjaharian/edit/{kode_produk}','App\Http\Controllers\BelanjaHarianController@edit');
+Route::post('belanjaharian/update/{kode_produk}', 'App\Http\Controllers\BelanjaHarianController@update');
+
 
 
 

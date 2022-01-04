@@ -15,7 +15,7 @@
             <div class="panel-body">
                 <form action="{{url('datapasar/create')}}" method="get">
                     <div class="form-group">
-                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-success">
+                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-light">
                     </div>
                 </form>
                 <table class="table table-striped">

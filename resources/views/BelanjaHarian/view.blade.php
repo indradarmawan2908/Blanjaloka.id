@@ -10,12 +10,12 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4>Daftar Belanja </h4>
+                <h4>Daftar Belanja Harian </h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('create')}}" method="get">
+                <form action="{{url('belanjaharian/create')}}" method="get">
                     <div class="form-group">
-                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-success">
+                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-primary">
                     </div>
                 </form>
                 <table class="table table-striped">
@@ -31,19 +31,16 @@
                     </thead>
 
                     <tbody>
-                        @foreach($data as $key => $kode_produk)
+                    @foreach ($belanjaharian as $BelanjaHarian)
                         <tr>
-                            <td>{{ $d->nama_produk }}</td>
-                            <td>{{ $d->satuan }}</td>
-                            <td>{{ $d->harga_jual}}</td>
-                            <td>{{ $d->stok_saat_ini }}</td>
-                            <td>{{ $d->stok_minimal }}</td>
-                            
-                            
-                            
+                            <td>{{ $BelanjaHarian->nama_produk }}</td>
+                            <td>{{ $BelanjaHarian->satuan }}</td>
+                            <td>{{ $BelanjaHarian->harga_jual}}</td>
+                            <td>{{ $BelanjaHarian->stok_saat_ini }}</td>
+                            <td>{{ $BelanjaHarian->stok_minimal }}</td>
                             <td>
-                                <a href="{{url('read',array($d->kode_produk))}}">Read</a>
-                                <a href="{{url('edit',array($d->kode_produk))}}">Edit</a>
+                                <a href="{{url('belanjaharian/delete',array($BelanjaHarian->kode_produk))}}">Hapus</a>
+                                <a href="{{url('belanjaharian/edit',array($BelanjaHarian->kode_produk))}}">Edit</a>
                             </td>
                         </tr>
                         @endforeach

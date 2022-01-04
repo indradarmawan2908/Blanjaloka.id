@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kelola Daftar Belanja</title>
+    <title>Kelola Daftar Belanja Harian</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
@@ -13,7 +13,7 @@
                 <h4>Kelola Daftar Belanja</h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('insert')}}" method="post">
+                <form action="{{url('belanjaharian')}}" method="post">
                     <div class="form-group">
                         <label for="nama_produk">Nama_produk</label>
                         <input type="text" name="nama_produk" id="nama_produk" class="form-control" required="require">
@@ -28,7 +28,7 @@
                     </div>    
                     <div class="form-group">
                         <label for="stok_saat_ini">Stok Saat Ini</label>
-                        <input type="text" name="sewa_toko" id="sewa_toko" class="form-control">
+                        <input type="text" name="stok_saat_ini" id="stok_saat_ini" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="stok_minimal">Stok Minimal</label>

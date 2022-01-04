@@ -15,7 +15,7 @@
             <div class="panel-body">
             <form action="{{url('toko/create')}}" method="get">
                     <div class="form-group">
-                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-success">
+                        <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-dark">
                     </div>
                 </form>
                 <table class="table table-striped">
@@ -45,8 +45,8 @@
            </td>
         
         <td>
-            <a href="{{url('toko/edit')}}/{{$Toko->id_toko}}" class="btn btn-primary"> Edit </a>
-            <a href="{{url('toko/delete')}}/{{$Toko->id_toko}}" class="btn btn-primary"> Delete </a>
+            <a href="{{url('toko/edit')}}/{{$Toko->id_toko}}" class="btn btn-secondary"> Edit </a>
+            <a href="{{url('toko/delete')}}/{{$Toko->id_toko}}" class="btn btn-warning"> Delete </a>
         </td>
        </tr>
         @endforeach        

@@ -17,13 +17,13 @@ class BahanMasakanController extends Controller
     }
 
     public function insert(Request $request){
-     $data=new BahanMasakan();
-        $data->resep_masakan=$request->get('resep_masakan');
-        $data->nama_produk=$request->get('nama_produk');
-        $data->satuan=$request->get('satuan');
-        $data->harga_jual=$request->get('harga_jual');
-        $data->stok_saat_ini=$request->get('stok_saat_ini');
-        $data->save();
+     $bahanmasakan=new BahanMasakan();
+        $bahanmasakan->resep_masakan=$request->resep_masakan;
+        $bahanmasakan->nama_produk=$request->nama_produk;
+        $bahanmasakan->satuan=$request->satuan;
+        $bahanmasakan->harga_jual=$request->harga_jual;
+        $bahanmasakan->stok_saat_ini=$request->stok_saat_ini;
+        $bahanmasakan->save();
      return redirect ('bahanmasakan');
     }
     public function edit($id_masakan){
