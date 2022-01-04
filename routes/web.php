@@ -116,6 +116,15 @@ Route::get('eventdiskon/create','App\Http\Controllers\EventDiskonController@crea
 Route::post('eventdiskon','App\Http\Controllers\EventDiskonController@insert');
 Route::get('eventdiskon/delete/{id_event_diskon}','App\Http\Controllers\EventDiskonController@delete');
 
+//Bahan Masakan
+Route::get('bahanmasakan','App\Http\Controllers\BahanMasakanController@index');
+Route::get('bahanmasakan/create','App\Http\Controllers\BahanMasakanController@create');
+Route::post('bahanmasakan', 'App\Http\Controllers\BahanMasakanController@insert');
+
+Route::get('bahanmasakan/delete/{id_masakan}','App\Http\Controllers\BahanMasakanController@delete');
+Route::get('bahanmasakan/edit/{id_masakan}','App\Http\Controllers\BahanMasakanController@edit');
+Route::post('bahanmasakan/update/{id_masakan}', 'App\Http\Controllers\BahanMasakanController@update');
+
 
 
 

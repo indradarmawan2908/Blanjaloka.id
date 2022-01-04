@@ -13,7 +13,7 @@
                 <h4>Bahan Masakan</h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('create')}}" method="get">
+                <form action="{{url('bahanmasakan/create')}}" method="get">
                     <div class="form-group">
                         <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-success">
                     </div>
@@ -22,6 +22,7 @@
                     <thead>
                         <tr>
                             <th>Resep Masakan</th>
+                            <th>Nama Produk</th>
                             <th>Satuan</th>
                             <th>Harga Jual</th>
                             <th>Stok Saat Ini</th>
@@ -30,15 +31,16 @@
                     </thead>
 
                     <tbody>
-                        @foreach($data as $key => $id_masakan)
+                    @foreach ($bahanmasakan as $BahanMasakan)
                         <tr>
-                            <td>{{ $d->resep_masakan }}</td>
-                            <td>{{ $d->satuan }}</td>
-                            <td>{{ $d->harga_jual }}</td>
-                            <td>{{ $d->stok_saat_ini }}</td>      
+                            <td>{{ $BahanMasakan->resep_masakan }}</td>
+                            <td>{{ $BahanMasakan->nama_produk }}</td>
+                            <td>{{ $BahanMasakan->satuan }}</td>
+                            <td>{{ $BahanMasakan->harga_jual }}</td>
+                            <td>{{ $BahanMasakan->stok_saat_ini }}</td>      
                             <td>
-                                <a href="{{url('read',array($d->id_masakan))}}">Read</a>
-                                <a href="{{url('edit',array($d->id_masakan))}}">Edit</a>
+                                <a href="{{url('bahanmasakan/delete',array($BahanMasakan->id_masakan))}}">Hapus</a>
+                                <a href="{{url('bahanmasakan/edit',array($BahanMasakan->id_masakan))}}">Edit</a>
                             </td>
                         </tr>
                         @endforeach

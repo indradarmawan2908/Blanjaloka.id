@@ -13,10 +13,14 @@
                 <h4>Kelola Bahan Masakan</h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('insert')}}" method="post">
+                <form action="{{url('bahanmasakan')}}" method="post">
                     <div class="form-group">
-                        <label for="resep_makanan">Resep Makanan</label>
+                        <label for="resep_masakan">Resep Makanan</label>
                         <input type="text" name="resep_masakan" id="resep_masakan" class="form-control" required="require">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama_produk">Nama Produk</label>
+                        <input type="text" name="nama_produk" id="nama_produk" class="form-control" required="require">
                     </div>
                     <div class="form-group">
                         <label for="satuan">Satuan</label>
@@ -28,7 +32,7 @@
                     </div> 
                     <div class="form-group">
                         <label for="stok_saat_ini">Stok Saat Ini</label>
-                        <input type="text" name="sewa_toko" id="sewa_toko" class="form-control">
+                        <input type="text" name="stok_saat_ini" id="stok_saat_ini" class="form-control">
                     </div>
                     <div class="form-group">
                         <input type="submit" name="send" id="send" value="Simpan" class="btn btn-success">{!!csrf_field()!!}                       
