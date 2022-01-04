@@ -13,7 +13,7 @@
                 <h4>Stok Gudang </h4>
             </div>
             <div class="panel-body">
-                <form action="{{url('create')}}" method="get">
+                <form action="{{url('stokgudang/create')}}" method="get">
                     <div class="form-group">
                         <input type="submit" name="new" id="new" value="Entry Baru" class="btn btn-success">
                     </div>
@@ -31,18 +31,18 @@
                     </thead>
 
                     <tbody>
-                        @foreach($data as $key => $id_stok_gudang)
+                    @foreach ($stokgudang as $Stokgudang)
                         <tr>
-                            <td>{{ $d->nama_produk }}</td>
-                            <td>{{ $d->satuan }}</td>
-                            <td>{{ $d->stok_saat_ini }}</td>
-                            <td>{{ $d->stok_minimal }}</td>
-                            <td>{{ $d->nama_toko}}</td>
+                            <td>{{ $Stokgudang->nama_produk }}</td>
+                            <td>{{ $Stokgudang->satuan }}</td>
+                            <td>{{ $Stokgudang->stok_saat_ini }}</td>
+                            <td>{{ $Stokgudang->stok_minimal }}</td>
+                            <td>{{ $Stokgudang->nama_toko}}</td>
                             
                             
                             <td>
-                                <a href="{{url('read',array($d->id_stok_gudang))}}">Read</a>
-                                <a href="{{url('edit',array($d->id_stok_gudang))}}">Edit</a>
+                                <a href="{{url('stokgudang/delete',array($Stokgudang->id_stok_gudang))}}">Hapus</a>
+                                <a href="{{url('stokgudang/edit',array($Stokgudang->id_stok_gudang))}}">Edit</a>
                             </td>
                         </tr>
                         @endforeach

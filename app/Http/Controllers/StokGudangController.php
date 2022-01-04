@@ -1,52 +1,51 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Stokgudang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StokGudangController extends Controller
 {
-    public function index(){
-     $data=StokGudang::all();
-        return view('index',compact('data'));
-    }
-
-    public function back(){
-     return redirect ('/');
+    public function index()
+    {
+      $stokgudang = Stokgudang::all();
+        return view('stokgudang.view')->with('stokgudang', $stokgudang);
     }
     
     public function create(){
-     return view('create');
+     return view('stokgudang.create');
     }
 
     public function insert(Request $request){
-     $data=new StokGudang();
-        $data->nama_produk=$request->get('nama_produk');
-        $data->satuan=$request->get('satuan');
-        $data->stok_saat_ini=$request->get('stok_saat_ini');
-        $data->stok_minimal=$request->get('stok_minimal');
-        $data->nama_toko=$request->get('nama_toko');
-        $data->save();
-     return redirect ('/');
+     $stokgudang=new Stokgudang();
+        $stokgudang->nama_produk=$request->nama_produk;
+        $stokgudang->satuan=$request->satuan;
+        $stokgudang->stok_saat_ini=$request->stok_saat_ini;
+        $stokgudang->stok_minimal=$request->stok_minimal;
+        $stokgudang->nama_toko=$request->nama_toko;
+        $stokgudang->save();
+     return redirect ('stokgudang');
     }
     public function edit($id_stok_gudang){
-        $data=StokGudang::find($id_stok_gudang);
-        return view('edit',compact('data'));
+        $stokgudang=Stokgudang::find($id_stok_gudang);
+        return view('stokgudang.edit',compact('stokgudang'));
        }
    
        public function update(Request $request, $id_stok_gudang){     
-        $data = StokGudang::findOrFail($id_stok_gudang);
-        $data->nama_produk=$request->get('nama_produk');
-        $data->satuan=$request->get('satuan');
-        $data->stok_saat_ini=$request->get('stok_saat_ini');
-        $data->stok_minimal=$request->get('stok_minimal');
-        $data->nama_toko=$request->get('nama_toko');
-           $data->save();
-        return redirect ('/')->with('alert-success','Data berhasil Diubah.');
+        $stokgudang = StokGudang::findOrFail($id_stok_gudang);
+        $stokgudang->nama_produk=$request->get('nama_produk');
+        $stokgudang->satuan=$request->get('satuan');
+        $stokgudang->stok_saat_ini=$request->get('stok_saat_ini');
+        $stokgudang->stok_minimal=$request->get('stok_minimal');
+        $stokgudang->nama_toko=$request->get('nama_toko');
+           $stokgudang->save();
+        return redirect ('stokgudang')->with('alert-success','Data berhasil Diubah.');
        }
-    public function read($id_stok_gudang){
-        $data=StokGudang::find($id_stok_gudang);
-        return view('read',compact('data'));
-       }
+       public function delete($id_stok_gudang){
+         $stokgudang=Stokgudang::find($id_stok_gudang);
+            $stokgudang->delete();
+            return back();
+        }
    
 }

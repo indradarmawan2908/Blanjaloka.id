@@ -93,13 +93,13 @@ Route::post('/datapasar/update/{id_datapasar}', 'App\Http\Controllers\DataPasarC
 Route::get('read/{id_datapasar}','App\Http\Controllers\DataPasarController@read');
 
 //Stok Gudang
-Route::get('index10','App\Http\Controllers\StokGudangController@index');
-Route::get('back','App\Http\Controllers\StokGudangController@back');
-Route::get('create','App\Http\Controllers\StokGudangController@create');
-Route::post('insert', 'App\Http\Controllers\StokGudangController@insert');
-Route::get('edit/{id_stok_gudang}','App\Http\Controllers\StokGudangController@edit');
-Route::post('update/{id_stok_gudang}', 'App\Http\Controllers\StokGudangController@update');
+Route::get('stokgudang','App\Http\Controllers\StokGudangController@index');
+Route::get('stokgudang/create','App\Http\Controllers\StokGudangController@create');
+Route::post('stokgudang', 'App\Http\Controllers\StokGudangController@insert');
+Route::get('stokgudang/edit/{id_stok_gudang}','App\Http\Controllers\StokGudangController@edit');
+Route::post('stokgudang/update/{id_stok_gudang}', 'App\Http\Controllers\StokGudangController@update');
 Route::get('read/{id_stok_gudang}','App\Http\Controllers\StokGudangController@read');
+Route::get('stokgudang/delete/{id_stok_gudang}','App\Http\Controllers\StokgudangController@delete');
 
 //Toko
 Route::get('toko','App\Http\Controllers\TokoController@index');
