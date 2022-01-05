@@ -37,7 +37,6 @@ Route::get('pengelolapasar','App\Http\Controllers\PengelolaPasarController@index
 Route::get('pengelolapasar/create','App\Http\Controllers\PengelolaPasarController@create');
 Route::post('pengelolapasar','App\Http\Controllers\PengelolaPasarController@pengelola');
 
-
     //Customer
 Route::get('customer','App\Http\Controllers\CustomerController@index');
 Route::get('customer/create','App\Http\Controllers\CustomerController@create');

@@ -10,7 +10,7 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4>Melihat Menambah Mengedit Driver</h4>
+                <h4>Data Driver</h4>
             </div>
             <div class="panel-body">
                 <form action="{{url('driver/create')}}" method="get">

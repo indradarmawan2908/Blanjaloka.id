@@ -27,7 +27,6 @@
                             <th>Tanggal Lahir</th>
                             <th>No KTP</th>
                             <th>Email</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
 

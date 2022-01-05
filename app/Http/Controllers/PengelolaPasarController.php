@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\PengelolaPasar;
+use Illuminate\Support\Facades\DB;
 
 class PengelolaPasarController extends Controller
 {
